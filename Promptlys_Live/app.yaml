@@ -1,0 +1,14 @@
+runtime: nodejs18  # Specify the Node.js version
+env: standard
+env_variables:
+
+
+handlers:
+- url: /.*
+  script: auto
+  secure: always
+
+automatic_scaling:
+  target_cpu_utilization: 0.6
+  min_instances: 1
+  max_instances: 3
